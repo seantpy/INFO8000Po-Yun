@@ -15,7 +15,6 @@ def users():
     return render_template ('student.html')
 
 
-
 @app.route('/addrec',methods = ['POST', 'GET'])
 def addrec():
     if request.method == 'POST':
@@ -48,5 +47,11 @@ def list():
     cur = con.cursor()
     cur.execute("select * from students")
     rows = cur.fetchall();
- 
     return render_template("list.html",rows = rows)
+    
+@app. route('/lists')
+def list2():
+    connection = sql.connect("database.db")
+    cursor = connection.cursor()
+    records = connection.execute("SELECT NAME from students")
+    return jsonify(records)
