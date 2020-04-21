@@ -1,0 +1,24 @@
+<html>
+   <body>
+
+      <form action = "{{ url_for('farmerimput') }}" method = "POST">
+          <h1> Feild data imput</h1>
+
+        Genotype of peanut:<br>
+        Example: 628, 630, 660, 668, 683, 694, 695, 696, 704, 708, 730, 736, 3L, 12Y, or 13M
+        <br><br>
+        Lesion: lesion length, ex: 0.191 <br> <br>
+                                        
+
+        Field_Genotype<br>
+         <input type = "text" name = "Field_Genotype" /><br>
+          
+         Lesion<br>
+         <input type = "text" name = "Lesion" /><br>
+          
+         <input type = "submit" value = "submit" /><br>
+         <br>
+         <a href = "/">Go back to home page</a> <br>
+        </form>
+   </body>
+</html>
