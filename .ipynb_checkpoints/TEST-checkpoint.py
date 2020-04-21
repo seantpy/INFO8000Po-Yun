@@ -8,24 +8,32 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "home.html"
+    return "HI INFO8000 TEST! Here is the instruction ; /entervaccine  : enter new data  ;   /list  : read dataset"
  
-@app.route('/users')
-def users():
-    return render_template ('student.html')
+@app.route('/entervaccine')
+def vaccine():
+    return render_template ('vaccine.html')
 
 
+<<<<<<< HEAD
 @app.route('/addrec',methods = ['POST', 'GET'])
 def addrec():
+=======
+
+@app.route('/addrec2', methods = ['POST', 'GET'])
+def addrec2():
+>>>>>>> 2f57c932c7bf6891d391a5424dee6f5913e2cacc
     if request.method == 'POST':
         try:
-            nm = request.form['nm']
-            addr = request.form['add']
-            city = request.form['city']
-            pin = request.form['pin']
-            with sql.connect("database.db") as con:
+            trademark = request.form['trademark']
+            manufacturer = request.form['manufacturer']
+            types = request.form['types']
+            species = request.form['species']
+            
+            with sql.connect("database2.db") as con:
                 cur = con.cursor()
-                cur.execute("INSERT INTO students (name,addr,city,pin) VALUES (?,?,?,?)",(nm,addr,city,pin))
+                cur.execute("INSERT INTO vaccines2 (trademark,manufacturer,types,species) VALUES(?,?,?,?)",(trademark,manufacturer,types,species))
+                
                 con.commit()
                 msg = "Record successfully added"
         
@@ -41,13 +49,14 @@ def addrec():
 
 @app. route('/list')
 def list():
-    con = sql.connect("database.db")
+    con = sql.connect("database2.db")
     con.row_factory = sql.Row
     
     cur = con.cursor()
-    cur.execute("select * from students")
+    cur.execute("select * from vaccines2")
     rows = cur.fetchall();
     return render_template("list.html",rows = rows)
+<<<<<<< HEAD
     
 @app. route('/lists')
 def list2():
@@ -55,3 +64,5 @@ def list2():
     cursor = connection.cursor()
     records = connection.execute("SELECT NAME from students")
     return jsonify(records)
+=======
+>>>>>>> 2f57c932c7bf6891d391a5424dee6f5913e2cacc
