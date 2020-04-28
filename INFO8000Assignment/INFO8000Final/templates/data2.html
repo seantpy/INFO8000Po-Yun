@@ -1,0 +1,37 @@
+<html>
+   <body>
+       <h1>Green House Data </h1>
+       
+        <a href = "/researcher">Go back to Researcher page</a> <br>
+        <a href = "/">Go back to home page</a> <br>
+ 
+      <table border = 2>
+         <thead>
+
+            <td>GenotypeNumber</td>
+            <td>Genotype</td>
+            <td>Rep</td>
+            <td>DAI3</td>
+            <td>DAI5</td>
+            <td>DAI7</td>
+            <td>DAI9</td>
+         </thead>
+ 
+         {% for row in rows4 %}
+            <tr>
+ 
+               <td>{{row["GenotypeNumber"]}}</td>
+               <td>{{row["Genotype"]}}</td>
+               <td>{{row["rep"]}}</td>
+               <td>{{row['DAI3']}}</td>
+               <td>{{row['DAI5']}}</td>
+               <td>{{row['DAI7']}}</td>
+               <td>{{row['DAI9']}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      <a href = "/researcher">Go back to Researcher page</a> <br>
+      <a href = "/">Go back to home page</a>
+ 
+   </body>
+</html>

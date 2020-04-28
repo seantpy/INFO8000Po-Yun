@@ -1,0 +1,43 @@
+<html>
+   <body>
+
+      <form action = "{{ url_for('addrec2') }}" method = "POST">
+            <h2>Data description</h2>  
+            <p>Each data collection includes 7 variables</p>
+            <p>GenotypeNumber: a specific number assigned to genotype</p>
+            <p>Genotype: full name of peanut genotype.</p> 
+            <p>rep: indicate replication number</p>
+            <p>DAI3: lesion length recorded at 3 days after stem rot disease occurrence</p>
+            <p>DAI5: lesion length recorded at 5 days after stem rot disease occurrence</p> 
+            <p> DAI7: lesion length recorded at 7 days after stem rot disease occurrence</p>
+            <p>DAI9: lesion length recorded at 9 days after stem rot disease occurrence</p>
+          
+         Genotype Number<br>
+         <input type = "text" name = "GenotypeNumber" /> <br>
+
+         Genotype <br>
+         <input type = "text" name = "Genotype" /><br>
+
+         Rep <br>
+         <input type = "text" name = "rep" /><br>
+          
+         DAI3<br>
+         <input type = "text" name = "DAI3" /><br>
+        
+         DAI5<br>
+         <input type = "text" name = "DAI5" /><br>
+          
+         DAI7<br>
+         <input type = "text" name = "DAI7" /><br>
+            
+         DAI9<br>
+         <input type = "text" name = "DAI9" /><br>
+          
+         <input type = "submit" value = "submit" /><br>
+        
+        </form>
+        <h3><a href="/data2"> Click to read data</a></h3>     
+        <h3><a href = "/">Go back to home page</a></h3>
+ 
+   </body>
+</html>

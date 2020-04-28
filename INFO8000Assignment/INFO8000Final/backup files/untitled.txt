@@ -1,0 +1,132 @@
+            if lesion > "0.2":
+                if d1weather == "Rain":
+                    msgsug= "Chemical should be applied today"
+                elif d2weather =="Rain":
+                    msgsug= "Chemical should be applied tomorrow"
+                elif d3weather =="Rain":
+                    msgsug= "Chemical should be applied 2 days later"
+                elif d4weather =="Rain":
+                    msgsug= "Chemical should be applied 3 days later"
+                elif d5weather =="Rain":
+                    msgsug= "Chemical should be applied 4 days later"
+                else:
+                    if d1temp > "24":
+                        if genotype == "628":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "660":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "668":
+                            msgsug= "SSymptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "708":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        else:
+                            msgsug= "Symptom of disease is observered, but it won't rain this week. Chemical is not neccessary."
+                    elif d2temp > "24":
+                        if genotype == "628":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "660":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "668":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today." 
+                        elif genotype == "708":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        else:
+                            msgsug= "Symptom of disease is observered, but it won't rain this week. Chemical is not neccessary"
+                    elif d3temp > "24":
+                        if genotype == "628":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "660":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "668":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "708":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        else:
+                            msgsug= "Symptom of disease is observered, but it won't rain this week. Chemical is not neccessary"
+                    elif d4temp > "24":
+                        if genotype == "628":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "660":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "668":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "708":
+                             msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        else:
+                            msgsug= "Symptom of disease is observered, but it won't rain this week. Chemical is not neccessary"
+                    elif d5temp > "24":
+                        if genotype == "628":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "660":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "668":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        elif genotype == "708":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chenical shoule be applied today. "
+                        else:
+                            msgsug= "Symptom of disease is observered, but it won't rain this week. Chemical is not neccessary"
+                    else: 
+                        msgsug= "Temperature is lower than 24'C. Thus, the chemical is not neccessary."
+            else: 
+                msgsug= "Symptom of disease is not significant. Chemical is not neccessary so far."     
+            return render_template("WeatherResult.html",msgrecord2=msgrecord2,rows2 =rows2,rows5=rows5,msgsug=msgsug)
+            
+            
+            
+            
+            
+            
+if str(genotype) == "628":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "660":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "668":
+                            msgsug= "SSymptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "708":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        else:
+                            msgsug= "Symptom of disease is observered, but it won't rain this week. Chemical is not neccessary."
+                    elif str(d2temp) > "5":
+                        if str(genotype) == "628":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "660":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "668":
+                            msgsug= "SSymptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "708":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        else:
+                            msgsug= "Symptom of disease is observered, but it won't rain this week. Chemical is not neccessary."
+                    elif str(d3temp) > "5":
+                        if str(genotype) == "628":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "660":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "668":
+                            msgsug= "SSymptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "708":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        else:
+                            msgsug= "Symptom of disease is observered, but it won't rain this week. Chemical is not neccessary."
+                    elif str(d4temp) > "5":
+                        if str(genotype) == "628":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "660":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "668":
+                            msgsug= "SSymptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "708":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        else:
+                            msgsug= "Symptom of disease is observered, but it won't rain this week. Chemical is not neccessary."
+                    elif str(d5temp) > "5":
+                        if str(genotype) == "628":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "660":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "668":
+                            msgsug= "SSymptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        elif str(genotype) == "708":
+                            msgsug= "Symptom of disease is observered. Though it won't rain this week, the genotype of peanut is vulnerable. Chemical should be applied today. "
+                        else:
+                            msgsug= "Symptom of disease is observered, but it won't rain this week. Chemical is not neccessary."
