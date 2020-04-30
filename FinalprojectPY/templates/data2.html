@@ -1,0 +1,55 @@
+<html>
+   <body>
+       <h1>Greenhouse Data </h1>
+       
+    
+       
+        <a href="/figure">
+                <input type="submit" Value="Analyze data and visualization" style="height:150px; width:170px" ></a>
+        <a href="/researcher">
+            <input type="submit" Value="Researcher page" style="height:150px; width:150px" ></a>
+        <a href="/">
+            <input type="submit" Value="Homepage" style="height:150px; width:150px" ></a>
+
+
+     <br>  <br>
+ 
+      <table border = 2>
+         <thead>
+
+            <td>GenotypeNumber</td>
+            <td>Genotype</td>
+            <td>  Rep  </td>
+            <td>  Exp  </td> 
+            <td>DAI3</td>
+            <td>DAI5</td>
+            <td>DAI7</td>
+            <td>DAI9</td>
+         </thead>
+ 
+         {% for row in rows4 %}
+            <tr>
+ 
+               <td>{{row["GenotypeNumber"]}}</td>
+               <td>{{row["Genotype"]}}</td>
+               <td>{{row["rep"]}}</td>
+                <td>{{row["exp"]}}</td>
+               <td>{{row['DAI3']}}</td>
+               <td>{{row['DAI5']}}</td>
+               <td>{{row['DAI7']}}</td>
+               <td>{{row['DAI9']}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+       <br><br>
+        <a href="/figure">
+            <input type="submit" Value="Analyze data and visualization" style="height:150px; width:170px" ></a>
+        <a href="/researcher">
+            <input type="submit" Value="Researcher page" style="height:150px; width:150px" ></a>
+        <a href="/">
+            <input type="submit" Value="Homepage" style="height:150px; width:150px" ></a>
+
+<br><br>
+      
+   </body>
+</html>
