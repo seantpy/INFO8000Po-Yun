@@ -1,0 +1,50 @@
+<html>
+   <body>
+
+      <form action = "{{ url_for('forecast') }}" method = "POST">
+          <h2> Lesion length observation</h2>
+
+       
+        <br>
+       
+        
+        Please select the peanut's genotype <br>
+        <select name="Field_Genotype" style="height:15px; width:100px" >
+            <option value="628">628</option>
+            <option value="630">630</option>
+            <option value="660">660</option>
+            <option value="668">668</option>
+            <option value="683">683</option>
+            <option value="694">694</option>
+            <option value="695">695</option>
+            <option value="696">696</option>
+            <option value="704">704</option>
+            <option value="708">708</option>
+            <option value="730">730</option>
+            <option value="736">736</option>
+            <option value="12Y">12Y</option>
+            <option value="13M">13M</option>
+        </select><br><br>
+        
+          
+          Lesion: lesion length, ex: 0.191 <br>
+         
+         <input type = "number" step = "0.001" name = "Lesion" style="height:20px; width:100px" />
+          <br>    <br>
+          
+          Please input city name, ex: Athens or Athens,us
+          <br> <input type= "text" name="City">
+          <br>
+         <input type = "submit" value = "submit" /><br>
+            </form>
+       
+          -------------------------------------------
+           <br> 
+         <a href="/">
+            <input type="submit" Value="Homepage" style="height:150px; width:100px" ></a>
+
+        <br>
+        
+
+   </body>
+</html>

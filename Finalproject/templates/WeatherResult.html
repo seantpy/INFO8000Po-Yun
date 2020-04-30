@@ -1,0 +1,53 @@
+<html>
+   <body>
+
+        <br>
+       * Data input : {{msgrecord2}} <br>
+       <br>
+        <h3>A. Field genotype and lesion </h3>
+          <table border = 2 color= black>
+             <thead>
+
+            <td>Genotype</td>
+            <td>Lesion</td>
+             </thead>
+
+                 {% for row in rows5 %}
+                <tr>
+
+               <td>{{row["Field_Genotype"]}}</td>
+               <td>{{row["Lesion"]}}</td>
+
+                </tr>
+         {% endfor %}
+          </table>
+       <h3>B. Averaged disease among these 14 genotypes during harvest without chemical</h3>
+            The predicted value will be:   {{msg_predict}}   cm
+       <br> 
+       
+        <h3>C. 5 Days weather forecast </h3>
+          <table border = 2 color= black>
+         <thead>
+
+            <td>City</td>
+            <td>Time</td>
+            <td>Weather</td>
+            <td>Temperature (min) </td>
+         </thead>
+
+         {% for row in rows2 %}
+            <tr>
+
+               <td>{{row["City"]}}</td>
+               <td>{{row["time"]}}</td>
+               <td>{{row["weather"]}}</td>
+               <td>{{row['temp']}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+        <br>
+<h3>D. Cheimal suggestion:  </h3>
+            {{msgsug}} <br>
+      </body>
+    </html>
